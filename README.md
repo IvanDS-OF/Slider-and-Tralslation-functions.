@@ -8,11 +8,11 @@ This program helps us to realize the importance of simulations.
 
 First at all, we need to call all the next libraries:
 
-> import matplotlib.pyplot as plt
-
-> import numpy as np
-
-> from matplotlib.widgets import Slider, Button
+```
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.widgets import Slider, Button
+``` 
 
 This last is the mos important because this is the one that gives us the Slider options. 
 

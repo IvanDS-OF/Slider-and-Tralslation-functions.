@@ -12,17 +12,9 @@ from matplotlib.widgets import Slider, Button
 def Squa_C(tras_x, tras_y, rot_z):
 	valor_en_x = 8
 	valor_en_y = 8
-	a = rot_z * np.pi / 180
 	lon_x = [valor_en_x, valor_en_x, -valor_en_x, -valor_en_x, valor_en_x]
 	lon_y = [valor_en_y, -valor_en_y, -valor_en_y, valor_en_y, valor_en_y]
-	mat_uno = [1, 1, 1, 1, 1]
-	C = [lon_x, lon_y, mat_uno]
-	P1 = [[1, 0, tras_x], [0, 1, tras_y], [0, 0, 1]]
-	P2 = [[np.cos(a), np.sin(a), 0], 
-          [-np.sin(a), np.cos(a), 0], 
-          [0, 0, 1]]
-	S1 = np.dot(np.dot(P1, P2), C)
-	return (S1[0], S1[1])
+	return (lon_x, lon_y)
 
 # Plot a second square (smaller) -> This is the one that will be manipulated with the sliders
 def Squa(tras_x, tras_y, rot_z):

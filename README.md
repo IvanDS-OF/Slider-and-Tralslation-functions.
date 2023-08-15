@@ -1,0 +1,1 @@
+# Slider-and-Tralslation-functions.

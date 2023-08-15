@@ -1,3 +1,7 @@
+# Code programmed by Eng. Ivan Duran Santos in Volkswagen de Mexico
+# This code runs above Python 3.10
+# This code does not go on Jupyter Notebooks
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
@@ -5,7 +9,7 @@ import time
 from matplotlib.widgets import Slider, Button
 
 # We start with the function to plot a square
-def squa_c(tras_x, tras_y, rot_z):
+def Squa_C(tras_x, tras_y, rot_z):
 	valor_en_x = 8
 	valor_en_y = 8
 	a = rot_z * np.pi / 180
@@ -20,7 +24,7 @@ def squa_c(tras_x, tras_y, rot_z):
 	S1 = np.dot(np.dot(P1, P2), C)
 	return (S1[0], S1[1])
 
-def squa(tras_x, tras_y, rot_z):
+def Squa(tras_x, tras_y, rot_z):
 	valor_en_x = 3
 	valor_en_y = 3
 	a = rot_z * np.pi / 180
@@ -38,9 +42,9 @@ def squa(tras_x, tras_y, rot_z):
 #First, we must draw the figure like a subplot
 fig, ax = plt.subplots()
 #we need to start ploting the initial values, square in 0, 0
-ax.plot(squa(0, 0, 0)[0], squa(0, 0, 0)[1], c="0.8")
-ax.plot(squa(0, 0, 0)[0], squa(0, 0, 0)[1], c="b")
-ax.plot(squa_c(0, 0, 0)[0], squa_c(0, 0, 0)[1], c="0.8")
+ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
+ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="b")
+ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
 
 
 
@@ -64,28 +68,28 @@ slider_z = Slider(slider_z_plot, "R_z", valmin=-90, valmax=90, valinit=0, valste
 def update_x(val_x):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
-	ax.plot(squa(0, 0, 0)[0], squa(0, 0, 0)[1], c="0.8")
-	ax.plot(squa_c(0, 0, 0)[0], squa_c(0, 0, 0)[1], c="0.8")
-	ax.plot(squa(slider_x.val, slider_y.val, slider_z.val)[0], 
-		    squa(slider_x.val, slider_y.val, slider_z.val)[1])
+	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
+		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()
 
 def update_y(val_y):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
-	ax.plot(squa(0, 0, 0)[0], squa(0, 0, 0)[1], c="0.8")
-	ax.plot(squa_c(0, 0, 0)[0], squa_c(0, 0, 0)[1], c="0.8")
-	ax.plot(squa(slider_x.val, slider_y.val, slider_z.val)[0], 
-		    squa(slider_x.val, slider_y.val, slider_z.val)[1])
+	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
+		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()
 
 def update_z(val_z):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
-	ax.plot(squa(0, 0, 0)[0], squa(0, 0, 0)[1], c="0.8")
-	ax.plot(squa_c(0, 0, 0)[0], squa_c(0, 0, 0)[1], c="0.8")
-	ax.plot(squa(slider_x.val, slider_y.val, slider_z.val)[0], 
-		    squa(slider_x.val, slider_y.val, slider_z.val)[1])
+	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
+		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()
 
 

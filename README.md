@@ -47,7 +47,7 @@ Later, the Rotation movement matrix:
 
 > Remember: these matrix are jsut for a 2 Dimentions Transformation
 
-[If you need more information about the Movement Transformation, you can find them here](https://www.tutorialspoint.com/computer_graphics/2d_transformation.html)
+[If you need more information about the Movement Transformation, you can find them here](https://www.tutorialspoint.com/computer_graphics/2d_transformation.htm)
 
 At the end of the function, it is necessary to combine the previous matrices using the Numpy **dot** operator, 
 

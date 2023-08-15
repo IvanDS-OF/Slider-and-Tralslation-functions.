@@ -24,7 +24,7 @@ Then I will define the initial functions that can do the next:
 
 **Squa_C**: This is just for draw a big square with dimentions of 8 each side. 
 
-**Squa**: This is the main function. We start giving the shape of the swuare _(3 x 3)_, then I write functions to transform the radiants to grades using $`a = argument * pi / 180`$. Then I define the sqare using two lists of 5 points in X and Y. I create the 1's vector and define the square matrix. Then I build the X and Y traslation matrix: 
+**Squa**: This is the main function. We start giving the shape of the swuare _(3 x 3)_, then I write functions to transform the radiants to grades using $`a = argument * pi / 180`$. Then I define the sqare using two lists of 5 points in X and Y. I create the 1'st vector and define the square matrix. Then I build the X and Y traslation matrix: 
 
 
 ```

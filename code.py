@@ -98,3 +98,5 @@ slider_z.on_changed(update_z)
 # We should define the axis. 
 ax.axis([-10, 10, -10, 10])
 plt.show()
+# It is necessary type **plt.show** at the end because the sliders run apart
+

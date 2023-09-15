@@ -87,3 +87,4 @@ This process is replied 3 times, because there are 3 sliders and the position of
 
 At the end, we need to write the **on_changed** from the sliders. 
 
+Just a comment

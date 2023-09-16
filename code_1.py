@@ -9,9 +9,9 @@ from matplotlib.widgets import Slider, Button
 
 # We start with the function to plot a big square (just reference)
 
-def Squa_C(tras_x, tras_y, rot_z):
+def Squa_C():
 	"""
-	Description: 
+	This function just draws an 8x8 sqare. No arguments required
 	"""
 	valor_en_x = 8
 	valor_en_y = 8
@@ -40,21 +40,20 @@ def Squa(tras_x, tras_y, rot_z):
 
 # First, we must draw the figure like a subplot
 fig, ax = plt.subplots()
+plt.show()
+
 # we need to start ploting the initial values, square in 0, 0
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="b")
-ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
-
-
-
+ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")
 
 #Now, we need to plot yhe slider, it's going to be in "horizontal"
 plt.subplots_adjust(bottom=0.30)
 
 #We define the dimension and characteristics of the slider
-slider_x_plot = plt.axes([0.1, 0.05, 0.8, 0.05])		#Dimensions
+slider_x_plot = plt.axes([0.1, 0.05, 0.8, 0.05])	#Dimensions
 slider_y_plot = plt.axes([0.1, 0.1, 0.8, 0.05])		#Dimensions
-slider_z_plot = plt.axes([0.1, 0.15, 0.8, 0.05])		#Dimensions
+slider_z_plot = plt.axes([0.1, 0.15, 0.8, 0.05])	#Dimensions
 #plt.axes([left, bottom, width, height])
 
 # Definition of the properties of the sliders 
@@ -72,7 +71,7 @@ def update_x(val_x):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
 	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
-	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")
 	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
 		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()
@@ -81,7 +80,7 @@ def update_y(val_y):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
 	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
-	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")
 	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
 		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()
@@ -91,7 +90,7 @@ def update_z(val_z):
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
 	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
-	ax.plot(Squa_C(0, 0, 0)[0], Squa_C(0, 0, 0)[1], c="0.8")
+	ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")
 	ax.plot(Squa(slider_x.val, slider_y.val, slider_z.val)[0], 
 		    Squa(slider_x.val, slider_y.val, slider_z.val)[1])
 	plt.draw()

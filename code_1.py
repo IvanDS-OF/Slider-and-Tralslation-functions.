@@ -44,13 +44,9 @@ def Squa(tras_x, tras_y, rot_z):
 
 # First, we must draw the figure like a subplot
 fig, ax = plt.subplots()
-<<<<<<< HEAD
-plt.show()
 
 # we need to start ploting the initial values, square in 0, 0
-=======
 # We need to start plotting the initial values, square in 0, 0
->>>>>>> refs/remotes/origin/main
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="b")
 ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")

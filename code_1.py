@@ -11,11 +11,7 @@ from matplotlib.widgets import Slider, Button
 
 def Squa_C():
 	"""
-<<<<<<< HEAD
-	This function just draws an 8x8 sqare. No arguments required
-=======
-	Description: This function just draws a 8x8 square
->>>>>>> refs/remotes/origin/main
+	This function just draws an 8x8 square. No arguments required
 	"""
 	valor_en_x = 8
 	valor_en_y = 8
@@ -26,7 +22,22 @@ def Squa_C():
 # Plot a second square (smaller) -> This is the one that will be manipulated with the sliders
 def Squa(tras_x, tras_y, rot_z):
 	"""
-	Description:
+	This function draws a 3x3 square and modifies its position with three arguments
+ 	The way to modify the position of the square is by implementing a translation matrix
+  	and a rotation matrix, and multiply them using np.dot to obtain a matrix
+   	with the same initial shape. 
+
+ 	Arguments: 
+  
+	tras_x (float): This modifies the x position of the square
+ 	tras_y (float): This modifies the y position of the square
+	rot_z (float): This modifies the z angle of the square
+
+ 	Returns:
+  
+  	S1[0] (list): It is a list of the x points of the squared 
+    S1[1] (list): It is a list of the y points of the squared 
+ 
 	"""
 	valor_en_x = 3
 	valor_en_y = 3
@@ -114,3 +125,5 @@ slider_z.on_changed(update_z)
 # We should define the axis. 
 ax.axis([-10, 10, -10, 10])
 plt.show()
+
+# Note: This code should be improved using the OOP paradigm 

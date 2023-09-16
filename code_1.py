@@ -11,7 +11,11 @@ from matplotlib.widgets import Slider, Button
 
 def Squa_C():
 	"""
+<<<<<<< HEAD
 	This function just draws an 8x8 sqare. No arguments required
+=======
+	Description: This function just draws a 8x8 square
+>>>>>>> refs/remotes/origin/main
 	"""
 	valor_en_x = 8
 	valor_en_y = 8
@@ -40,9 +44,13 @@ def Squa(tras_x, tras_y, rot_z):
 
 # First, we must draw the figure like a subplot
 fig, ax = plt.subplots()
+<<<<<<< HEAD
 plt.show()
 
 # we need to start ploting the initial values, square in 0, 0
+=======
+# We need to start plotting the initial values, square in 0, 0
+>>>>>>> refs/remotes/origin/main
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
 ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="b")
 ax.plot(Squa_C()[0], Squa_C()[1], c="0.8")
@@ -66,7 +74,7 @@ slider_z = Slider(slider_z_plot, "R_z", valmin=-90, valmax=90, valinit=0, valste
 #Finally, we must define the function of UPDATING
 def update_x(val_x):
 	"""
-	a
+	This function displays the changes from slider X using the val_x slicer as input
 	"""
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
@@ -77,6 +85,9 @@ def update_x(val_x):
 	plt.draw()
 
 def update_y(val_y):
+	"""
+	This function displays the changes from slider Y using the val_x slicer as input
+ 	"""
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
 	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
@@ -87,6 +98,9 @@ def update_y(val_y):
 
 
 def update_z(val_z):
+	"""
+	This function displays the changes from slider Z using the val_x slicer as input
+ 	"""
 	ax.clear()
 	ax.axis([-10, 10, -10, 10])
 	ax.plot(Squa(0, 0, 0)[0], Squa(0, 0, 0)[1], c="0.8")
